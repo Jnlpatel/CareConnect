@@ -8,13 +8,23 @@ const app = express();
 connectDB();
 
 app.use(express.json());
-app.use(cors());
+const allowedOrigins = [
+  'https://care-connect-theta.vercel.app',  // production
+  'http://localhost:5173'                   // your Vite dev server
+];
 
 app.use(cors({
-  origin: 'https://care-connect-theta.vercel.app',  // your Vercel URL
+  origin: (origin, callback) => {
+    // allow requests with no origin (e.g. mobile apps, curl)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+    callback(new Error(`CORS policy: origin ${origin} not allowed`));
+  },
   methods: ['GET','POST','PUT','DELETE','OPTIONS'],
   allowedHeaders: ['Content-Type','Authorization'],
-  credentials: true  // if you ever send cookies/auth headers
+  credentials: true
 }));
 
 // Routes
