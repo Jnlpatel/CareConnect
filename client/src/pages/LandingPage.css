@@ -1,0 +1,19 @@
+/* LandingPage.css */
+
+/* Navbar */
+.landing-navbar { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+
+/* Hero */
+.hero-section { padding: 100px 0; }
+.hero-text h1 { font-size: 2.5rem; margin-bottom: 20px; }
+.hero-img img { max-width: 100%; border-radius: 8px; }
+
+/* Features */
+.feature-card { text-align: center; padding: 20px; }
+.feature-icon { font-size: 2rem; color: #0d6efd; margin-bottom: 10px; }
+
+/* How It Works */
+#how-it-works .card { border: none; background: #fff; }
+
+/* Footer */
+footer { font-size: 0.9rem; }

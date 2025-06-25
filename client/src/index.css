@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* custom global styles here if needed */
+@layer base {
+  body {
+    @apply bg-gray-100 text-gray-900;
+  }
+}
+@layer components {
+  .btn {
+    @apply px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600;
+  }
+}
+@layer utilities {
+  .text-center {
+    @apply text-center;
+  }
+  .mt-4 {
+    @apply mt-4;
+  }
+}
+@layer screens {
+  @screen sm {
+    .text-sm {
+      @apply text-sm;
+    }
+  }
+  @screen md {
+    .text-md {
+      @apply text-md;
+    }
+  }
+  @screen lg {
+    .text-lg {
+      @apply text-lg;
+    }
+  }
+  @screen xl {
+    .text-xl {
+      @apply text-xl;
+    }
+  }
+}
+@layer forms {
+  .form-input {
+    @apply border-gray-300 rounded-md focus:border-blue-500 focus:ring-blue-500;
+  }
+  .form-select {
+    @apply border-gray-300 rounded-md focus:border-blue-500 focus:ring-blue-500;
+  }
+  .form-textarea {
+    @apply border-gray-300 rounded-md focus:border-blue-500 focus:ring-blue-500;
+  }
+}
+@layer typography {
+  .prose {
+    @apply prose prose-sm sm:prose-base md:prose-lg lg:prose-xl xl:prose-2xl;
+  }
+  .prose h1 {
+    @apply text-2xl font-bold;
+  }
+  .prose h2 {
+    @apply text-xl font-semibold;
+  }
+  .prose h3 {
+    @apply text-lg font-semibold;
+  }
+  .prose p {
+    @apply text-base leading-relaxed;
+  }
+  .prose a {
+    @apply text-blue-600 hover:text-blue-800;
+  }
+  .prose ul {
+    @apply list-disc pl-5;
+  }
+  .prose ol {
+    @apply list-decimal pl-5;
+  }
+  .prose li {
+    @apply mb-2;
+  }
+  .prose img {
+    @apply max-w-full h-auto;
+  }
+  .prose code {
+    @apply bg-gray-100 rounded px-1;
+  }
+  .prose pre {
+    @apply bg-gray-900 text-white p-4 rounded overflow-x-auto;
+  }
+  .prose blockquote {
+    @apply border-l-4 border-gray-300 pl-4 italic text-gray-700;
+  }
+  .prose table {
+    @apply w-full border-collapse mt-4;
+  }
+  .prose th {
+    @apply bg-gray-200 text-left p-2 border-b;
+  }
+  .prose td {
+    @apply p-2 border-b;
+  }  
+  .prose thead {
+    @apply bg-gray-100;
+  }
+  .prose tbody {
+    @apply bg-white;
+  }
+  .prose tfoot {
+    @apply bg-gray-100;
+  }
+  .prose caption {
+    @apply text-sm text-gray-500 mt-2;
+  }
+  .prose hr {
+    @apply border-gray-300 my-4;
+  }
+  .prose strong {
+    @apply font-semibold text-gray-900;
+  }
+  .prose em {
+    @apply italic text-gray-700;
+  }
+  .prose mark {
+    @apply bg-yellow-200 text-gray-900;
+  }
+  .prose sub {
+    @apply text-xs align-sub;
+  }
+  .prose sup {
+    @apply text-xs align-super;
+  }
+  .prose small {
+    @apply text-xs text-gray-500;
+  }
+  .prose del {
+    @apply line-through text-gray-500;
+  }
+  .prose ins {
+    @apply text-green-600;
+  }
+  .prose kbd {
+    @apply bg-gray-200 rounded px-1 font-mono text-sm;
+  }
+  .prose samp {
+    @apply bg-gray-100 rounded px-1 font-mono text-sm;
+  }
+  .prose var {
+    @apply font-italic text-gray-800;
+  }
+  .prose b {
+    @apply font-bold text-gray-900;
+  }
+  .prose i {
+    @apply italic text-gray-700;
+  }
+  .prose u {
+    @apply underline text-gray-900;
+  }
+  .prose s {
+    @apply line-through text-gray-500;
+  }
+  .prose q { 
+    @apply quotes none;
+  }
+  .prose dfn {
+    @apply font-semibold text-gray-900;
+  }
+  .prose abbr {
+    @apply text-gray-600 hover:text-gray-900 cursor-help;
+  }
+  .prose time {
+    @apply text-gray-600;
+  }
+  .prose bdi {
+    @apply whitespace-nowrap;
+  }
+  .prose bdo {
+    @apply text-gray-900;
+  }
+  .prose ruby {
+    @apply text-gray-900;
+  }
+  .prose rt {
+    @apply text-gray-600;
+  }
+  .prose rp {
+    @apply text-gray-600;
+  }
+  .prose wbr {
+    @apply break-all;
+  }
+  .prose hr {
+    @apply border-gray-300 my-4;
+  }
+  .prose details {
+    @apply bg-gray-100 p-4 rounded;
+  }
+  .prose summary {
+    @apply cursor-pointer font-semibold text-gray-900;
+  }
+  .prose dialog {
+    @apply bg-white shadow-lg rounded p-6;
+  }
+  .prose caption {  
+    @apply text-sm text-gray-500 mt-2;
+  }
+}
