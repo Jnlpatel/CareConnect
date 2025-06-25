@@ -10,6 +10,13 @@ connectDB();
 app.use(express.json());
 app.use(cors());
 
+app.use(cors({
+  origin: 'https://care-connect-theta.vercel.app',  // your Vercel URL
+  methods: ['GET','POST','PUT','DELETE','OPTIONS'],
+  allowedHeaders: ['Content-Type','Authorization'],
+  credentials: true  // if you ever send cookies/auth headers
+}));
+
 // Routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/users', require('./routes/users'));
