@@ -10,7 +10,7 @@ connectDB();
 app.use(express.json());
 const allowedOrigins = [
   'https://care-connect-theta.vercel.app',  // production
-  'http://localhost:5173'                   // your Vite dev server
+  // 'http://localhost:5173'                   // your Vite dev server
 ];
 
 app.use(cors({
