@@ -74,7 +74,10 @@ router.post('/', protect, authorizeRoles('patient'), async (req, res) => {
 router.get('/patient', protect, authorizeRoles('patient'), async (req, res) => {
   try {
     const appointments = await Appointment.find({ patientId: req.user.id })
-      .populate('doctorId')
+      .populate({
+        path: 'doctorId',
+        populate: { path: 'userId', select: 'name' }
+      })
       .populate('serviceId')
       .sort({ dateTime: 1 });
     res.json(appointments);

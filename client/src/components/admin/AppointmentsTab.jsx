@@ -15,11 +15,12 @@ export default function AppointmentsTab({ appointments, reload }) {
     await API.delete(`/appointments/${id}`);
     reload();
   };
-  const changeStatus = async (id, status) => {
-    await API.put(`/appointments/${id}/status`, { status });
+
+const changeStatus = async (id, status) => {
+    // hits your admin-only PUT /api/appointments/:id
+    await API.put(`/appointments/${id}`, { status });
     reload();
   };
-
   return (
     <>
       <Form.Control
